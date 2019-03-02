@@ -9,7 +9,8 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.paths << Rails.root.join("lib", "assets", "javascripts")
 Rails.application.config.assets.paths << Rails.root.join("lib", "assets", "stylesheets")
+Rails.application.config.assets.paths << Rails.root.join("lib", "assets", "webfonts")
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-Rails.application.config.assets.precompile += %w( bootstrap.min.css bootstrap.min.js )
+Rails.application.config.assets.precompile += %w( bootstrap.min.css bootstrap.min.js sb-admin-2.min.css sb-admin-2.min.js all.min.css all.min.js)
