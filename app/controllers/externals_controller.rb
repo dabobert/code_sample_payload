@@ -1,0 +1,2 @@
+class ExternalsController < ApplicationController
+end
