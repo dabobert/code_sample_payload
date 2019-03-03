@@ -3,5 +3,6 @@
     <%= form.label :owner_email %>
     <%= form.text_field :owner_email, :class=>"form-control" %>
   </div>
+  <%= form.hidden_field :user_id, :value => current_user.id %>
   <button type="submit" class="btn btn-primary">Submit</button>
 <% end %>

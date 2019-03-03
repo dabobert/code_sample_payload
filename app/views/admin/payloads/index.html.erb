@@ -12,7 +12,8 @@
       <th>UUID</th>
       <th>owner</th>
       <th>Uploaded</th>
-      <th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +24,13 @@
         <td><%= payload.owner_email %></td>
         <td><%= payload.date_uploaded %></td>
         <td><%= link_to("view", payload_path(payload.uuid)) if payload.complete? %></td>
+        <td>
+          <% if payload.complete? %>
+            <%= link_to(payload.file.url, :target => "blank") do %>
+               <i class="fas fa-download"></i>
+            <% end %>
+          <% end %>
+       </td>
       </tr>
     <% end %>
   </tbody>

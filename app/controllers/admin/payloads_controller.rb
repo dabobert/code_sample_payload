@@ -33,9 +33,7 @@ class Admin::PayloadsController < AdminController
   ############################################################################
 
   def payload_params
-    params.require(:payload).permit(:owner_email)
+    params.require(:payload).permit(:owner_email, :user_id)
   end
-
-
 
 end
