@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :payloads
   end
 
+  resource :admin
   resource :home
   resource :external
   root to: "externals#show"
