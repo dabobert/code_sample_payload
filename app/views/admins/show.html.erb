@@ -1,6 +1,5 @@
-<div>
-  There are X users
-</div>
-<div>
-  There are X payloads
-</div>
+<ul>Current Status
+  <li><%= link_to "#{User.count} users", admin_users_path %></li>
+  <li><%= link_to "#{Payload.count} payloads", admin_payloads_path %></li>
+  <li><%= link_to "#{Payload.completed.count} completed payloads", completed_admin_payloads_path %></li>
+</ul>
