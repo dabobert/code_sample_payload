@@ -208,9 +208,7 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-          <div class="notice"><%= notice %></div>
-          <div class="alert"><%= alert %></div>
-
+          <%= render :partial => "shared/flash_notifications" %>
           <%= yield %>
         </div>
         <!-- /.container-fluid -->

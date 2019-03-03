@@ -28,8 +28,7 @@
 
   <!-- Page Content -->
   <div class="container">
-    <div class="notice"><%= notice %></div>
-    <div class="alert"><%= alert %></div>
+    <%= render :partial => "shared/flash_notifications" %>
     <%= yield %>
   </div>
 
