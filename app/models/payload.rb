@@ -1,4 +1,6 @@
 class Payload < ApplicationRecord
+  mount_uploader :file, PayloadUploader
+
   validates_presence_of :uuid, :owner_email
 
   after_initialize :generate_uuid
@@ -10,6 +12,14 @@ class Payload < ApplicationRecord
     PayloadMailer.with(:payload => self).notification.deliver_now
   end
 
+
+  def incomplete?
+    not(self.complete?)
+  end
+  
+  def complete?
+    self.date_uploaded.present?
+  end
 
   class << self
     def seek(id, raise_error = true)
