@@ -1,3 +1,9 @@
+<p>
+  <%= link_to  "New User", new_admin_user_path, :class => "btn btn-sm btn-primary shadow-sm" %>
+  <%= link_to  "New Payload", new_admin_payload_path, :class => "btn btn-sm btn-primary shadow-sm" %>
+</p>
+
+
 <ul>Current Status
   <li><%= link_to "#{User.count} users", admin_users_path %></li>
   <li><%= link_to "#{Payload.count} payloads", admin_payloads_path %></li>
