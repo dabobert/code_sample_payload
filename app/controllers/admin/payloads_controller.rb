@@ -22,6 +22,12 @@ class Admin::PayloadsController < AdminController
   end
 
 
+  def completed
+    @payloads = Payload.completed.paginate(:page => params[:page])
+    render :action => :index
+  end
+
+
   ############################################################################
   private
   ############################################################################

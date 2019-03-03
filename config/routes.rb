@@ -4,7 +4,11 @@ Rails.application.routes.draw do
 
   #Admin stuff
   namespace :admin  do
-    resources :payloads
+    resources :payloads do
+      collection do
+        get 'completed'
+      end
+    end
     resources :users
   end
 
