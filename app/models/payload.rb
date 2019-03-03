@@ -6,7 +6,7 @@ class Payload < ApplicationRecord
   after_initialize :generate_uuid
   after_create :deliver
 
-  scope(:completed, -> { where "payloads.date_uploaded IS NOT NULL" })
+  scope(:completed, -> { where "payloads.uploaded_at IS NOT NULL" })
 
   def deliver
     PayloadMailer.with(:payload => self).notification.deliver_now
@@ -18,7 +18,7 @@ class Payload < ApplicationRecord
   end
   
   def complete?
-    self.date_uploaded.present?
+    self.uploaded_at.present?
   end
 
   class << self

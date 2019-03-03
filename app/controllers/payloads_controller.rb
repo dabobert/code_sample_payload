@@ -34,7 +34,7 @@ class PayloadsController < ApplicationController
   end
 
   def payload_params
-    params.require(:payload).permit(:file, :descr, :date_uploaded)
+    params.require(:payload).permit(:file, :descr, :uploaded_at)
   end
 
 
