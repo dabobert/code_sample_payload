@@ -7,6 +7,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :recoverable, :rememberable, :validatable
 
 
+  def name
+    "#{self.first_name} #{self.last_name}".strip
+  end
+
   def is_admin?
     @is_admin ||= self.admin_level > 0
   end
