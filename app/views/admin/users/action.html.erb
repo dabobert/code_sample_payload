@@ -1,0 +1,27 @@
+<%= form_for [:admin, @user] do |form| %>
+  <div class="form-group">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :pasword %>
+    <%= form.password_field :password, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation, :class=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :admin_level, "Is Admin" %>
+    <%= form.check_box :admin_level, :class=>"form-control", :checked_value => 1, :unchecked_value => 0 %>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+<% end %>
