@@ -1,8 +1,7 @@
 class PayloadsController < ApplicationController
 
   def show
-    @payload = Payload.seek(params[:id])
-    redirect_to edit_payload_path(@payload)
+    redirect_to edit_payload_path(params[:id])
   end
 
 
