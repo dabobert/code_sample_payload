@@ -1,3 +1,8 @@
+<p>
+  <%= link_to  "New Payload", new_admin_payload_path, :class => "btn btn-sm btn-primary shadow-sm" %>
+</p>
+
+
 <%= will_paginate @payloads %>
 
 <table class="table">
@@ -5,7 +10,7 @@
     <tr>
       <th>id</th>
       <th>UUID</th>
-      <th>filename</th>
+      <th>owner</th>
     </tr>
   </thead>
   <tbody>
@@ -13,7 +18,7 @@
       <tr>
         <td><%= payload.id %></td>
         <td><%= payload.uuid %></td>
-        <td><%= payload.filename %></td>
+        <td><%= payload.owner_email %></td>
       </tr>
     <% end %>
   </tbody>
