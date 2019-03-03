@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   #Admin stuff
   namespace :admin  do
     resources :payloads
+    resources :users
   end
 
   resource :admin

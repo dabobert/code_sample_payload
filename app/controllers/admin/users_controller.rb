@@ -1,8 +1,8 @@
-class Admin::UsersController < ApplicationController
+class Admin::UsersController < AdminController
 
 
   def index
-    @users = Users.paginate
+    @users = User.paginate(:page => params[:page])
   end
 
   def new
