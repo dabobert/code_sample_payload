@@ -10,4 +10,12 @@ class User < ApplicationRecord
   def is_admin?
     @is_admin ||= self.admin_level > 0
   end
+
+  def access_level
+    if self.is_admin?
+      "Admin"
+    else
+      "Regular"
+    end
+  end
 end
