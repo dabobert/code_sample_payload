@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :users
   end
 
+  resources :payloads
   resource :admin
   resource :home
   resource :external
