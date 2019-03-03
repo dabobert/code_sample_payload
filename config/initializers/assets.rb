@@ -13,4 +13,4 @@ Rails.application.config.assets.paths << Rails.root.join("lib", "assets", "webfo
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-Rails.application.config.assets.precompile += %w( bootstrap.min.css bootstrap.min.js sb-admin-2.min.css sb-admin-2.min.js all.min.css all.min.js)
+Rails.application.config.assets.precompile += %w( bootstrap.min.css bootstrap.min.js sb-admin-2.min.css sb-admin-2.min.js all.css all.min.js)
