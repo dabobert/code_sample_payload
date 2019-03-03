@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_03_013515) do
+ActiveRecord::Schema.define(version: 2019_03_03_052636) do
 
   create_table "payloads", force: :cascade do |t|
     t.string "uuid", null: false
     t.string "file"
-    t.string "mime"
+    t.string "content_type"
     t.string "owner_email", null: false
-    t.integer "filesize"
+    t.integer "file_size"
     t.text "descr"
     t.datetime "date_uploaded"
     t.integer "user_id"
