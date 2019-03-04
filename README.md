@@ -32,7 +32,7 @@ Admin Robot (u:`admin@payload.io` p:`password`) and Frankie Smiley (u:`frank@pay
 Admin Robot is an admin user. When this user is logged in, one is taken to the admin console
 Frankie Smiley is registered admin user.  When this user is logged in, one is taken to a non portion of the app. This was impletented to demonstrate that it is possible for registered non-admin users to interact with the site as well and be delivered their own kind of funcationality.
 
-For the purpose of creating data, Admin Robot must used
+For the purpose of creating data, Admin Robot must used.  Also for secuirity reasons the primary id of payloas is never exposed to the users, nor are payloads accessible via their primary id.  the uuid must be used.  this way a user will never be able to enter a random number in hopes of seeing data that is not their own
 
 1. When a Admin Robot logs in, one immediatly sees a summary of the users created, payloads created, and payloads that have data uploaded to them 
 2. when a payload is viewed they see
